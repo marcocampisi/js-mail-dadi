@@ -1,15 +1,13 @@
 const dadoUtente = Math.floor(Math.random() * 6);
 const dadoComputer = Math.floor(Math.random() * 6);
 const bottoneGioco = document.getElementById('bottoneGioco');
-
-let gioco = false;
+const punteggioComputer = document.getElementById('punteggioComputer');
+const punteggioUtente = document.getElementById('punteggioUtente');
 
 bottoneGioco.addEventListener('click',
     function(event) {
-        gioco = true;
+        punteggioUtente.innerHTML = dadoUtente;
+        punteggioComputer.innerHTML = dadoComputer;
+        
     }
 );
-
-if (gioco) {
-    
-}
