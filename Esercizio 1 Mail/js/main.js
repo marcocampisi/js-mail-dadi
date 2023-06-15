@@ -9,16 +9,17 @@ const mailAutorizzate = [
 ];
 
 const inputMail = document.getElementById('inputMail');
-const bottoneLogin = document.getElementById('bottoneLogin');
-let mailUtente = inputMail.value;
-let mailValida = false;
+const formLogin = document.getElementById('formLogin');
 
-bottoneLogin.addEventListener('click',
+formLogin.addEventListener('submit',
     function(event) {
         event.preventDefault();
+        let mailUtente = inputMail.value;
+        let mailValida = false;
         for (let i = 0; i < mailAutorizzate.length; i++) {
             if (mailUtente == mailAutorizzate[i]) {
                 mailValida = true;
+                break;
             }
         }
 
