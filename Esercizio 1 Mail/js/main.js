@@ -8,8 +8,24 @@ const mailAutorizzate = [
     'utente5@boolean.careers'
 ];
 
-const mailUtente = document.getElementById('mailUtente').value
+const inputMail = document.getElementById('inputMail');
+const bottoneLogin = document.getElementById('bottoneLogin');
+let mailUtente = inputMail.value;
+let mailValida = false;
 
-for (let i = 0; i < mailAutorizzate.length; i++) {
-    console.log(mailAutorizzate[i]);
-}
+bottoneLogin.addEventListener('click',
+    function(event) {
+        event.preventDefault();
+        for (let i = 0; i < mailAutorizzate.length; i++) {
+            if (mailUtente == mailAutorizzate[i]) {
+                mailValida = true;
+            }
+        }
+
+        if (mailValida) {
+            alert('Mail autorizzata, login consentito')
+        } else {
+            alert('Mail negata, login non consentito')
+        }
+    }
+);
