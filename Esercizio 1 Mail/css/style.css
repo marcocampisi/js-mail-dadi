@@ -1,2 +1,9 @@
 @import "reset.css";
 @import "general.css";
+
+/* MAIN */
+
+body {
+    background: rgb(187,251,172);
+    background: linear-gradient(90deg, rgba(187,251,172,1) 31%, rgba(0,212,255,1) 100%); 
+}
